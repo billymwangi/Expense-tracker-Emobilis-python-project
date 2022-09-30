@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <script src="../static/bootstrap/js/jquery-3.4.0.js"></script>
+    <script src="../static/bootstrap/js/popper.min.js"></script>
+    <script src="../static/bootstrap/css/bootstrap.css"></script>
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
+</head>
+<body>
+    <section>
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <h1 class="text-info text-center">Update Product</h1>
+                {% for message in get_flashed_messages() %}
+                <p class="text-success text-center">{{ message }}</p>
+                {% endfor %}
+                <form method="post">
+                    <input value= "{{ expense.name }}" class="form-control" name="name" placeholder="Expense name" type="text"><br>
+                    <input value= "{{ expense.cost }}" class="form-control" name="cost" placeholder="Expense cost" type="text"><br>
+                    <input class="btn btn-outline-info btn-block mb-2" name="btn_update" value="Update product" type="submit">
+                    <a class="btn btn-outline-secondary btn-block" href="/expenses">Back</a>
+
+                </form>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </section>
+</body>
+</html>
